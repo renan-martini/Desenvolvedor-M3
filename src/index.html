@@ -39,74 +39,89 @@
     </section>
     <main>
       <aside>
-        <fieldset>
+        <fieldset class="color-filter">
           <legend>CORES</legend>
           <div>
-            <input type="checkbox" id="amarelo" value="amarelo" name="color" />
+            <input type="checkbox" id="amarelo" value="Amarelo" name="color" />
             <label for="amarelo">Amarelo</label>
           </div>
           <div>
-            <input type="checkbox" id="azul" value="azul" name="color" />
+            <input type="checkbox" id="azul" value="Azul" name="color" />
             <label for="azul">Azul</label>
           </div>
           <div>
-            <input type="checkbox" id="branco" value="branco" name="color" />
+            <input type="checkbox" id="branco" value="Branco" name="color" />
             <label for="branco">Branco</label>
           </div>
           <div>
-            <input type="checkbox" id="cinza" value="cinza" name="color" />
+            <input type="checkbox" id="cinza" value="Cinza" name="color" />
             <label for="cinza">Cinza</label>
           </div>
         </fieldset>
         <div class="size-filter">
           <legend>TAMANHOS</legend>
           <div>
-            <button>P</button>
-            <button>M</button>
-            <button>G</button>
-            <button>GG</button>
-            <button>U</button>
-            <button>36</button>
-            <button>38</button>
-            <button>40</button>
+            <button class="size-button">P</button>
+            <button class="size-button">M</button>
+            <button class="size-button">G</button>
+            <button class="size-button">GG</button>
+            <button class="size-button">U</button>
+            <button class="size-button">36</button>
+            <button class="size-button">38</button>
+            <button class="size-button">40</button>
           </div>
         </div>
-        <fieldset>
+        <fieldset class="price-filters">
           <legend>FAIXA DE PREÇO</legend>
           <div>
-            <input type="radio" id="0-50" value="0-50" name="price-filter" />
-            <label for="0-50">de R$0 até R$50</label>
+            <input
+              type="radio"
+              id="i0-50"
+              value="0-50"
+              name="price-filter"
+              class="price-filter"
+            />
+            <label for="i0-50">de R$0 até R$50</label>
           </div>
           <div>
             <input
               type="radio"
-              id="51-150"
+              id="i51-150"
               value="51-150"
               name="price-filter"
+              class="price-filter"
             />
-            <label for="51-150">de R$51 até R$150</label>
+            <label for="i51-150">de R$51 até R$150</label>
           </div>
           <div>
             <input
               type="radio"
-              id="151-300"
+              id="i151-300"
               value="151-300"
               name="price-filter"
+              class="price-filter"
             />
-            <label for="151-300">de R$151 até R$300</label>
+            <label for="i151-300">de R$151 até R$300</label>
           </div>
           <div>
             <input
               type="radio"
-              id="301-500"
+              id="i301-500"
               value="301-500"
               name="price-filter"
+              class="price-filter"
             />
-            <label for="301-500">de R$301 até R$500</label>
+            <label for="i301-500">de R$301 até R$500</label>
           </div>
           <div>
-            <input type="radio" id="500+" value="500+" name="price-filter" />
-            <label for="500+">a partir de R$500</label>
+            <input
+              type="radio"
+              id="i500+"
+              value="500-infinity"
+              name="price-filter"
+              class="price-filter"
+            />
+            <label for="i500+">a partir de R$500</label>
           </div>
         </fieldset>
       </aside>
@@ -162,22 +177,22 @@
         </li>
       </ul>
     </main>
-    <div class="modal-filter modal">
+    <div class="modal-order modal">
       <div>
         <header>
-          <h2>FILTRAR</h2>
-          <button>x</button>
+          <h2>ORDENAR</h2>
+          <button class="close-order-modal">x</button>
         </header>
         <p>Mais recentes</p>
         <p>Maior preço</p>
         <p>Menor preço</p>
       </div>
     </div>
-    <div class="modal-order modal">
+    <div class="modal-filter modal">
       <div>
         <header>
-          <h2>ORDENAR</h2>
-          <button>x</button>
+          <h2>FILTRAR</h2>
+          <button class="close-filter-modal">x</button>
         </header>
         <details>
           <summary>
@@ -200,61 +215,66 @@
             </div>
           </summary>
 
-          <fieldset>
+          <fieldset class="color-filter">
             <div>
               <input
                 type="checkbox"
-                id="amarelo"
-                value="amarelo"
+                id="amareloMOD"
+                value="Amarelo"
                 name="color"
               />
-              <label for="amarelo">Amarelo</label>
+              <label for="amareloMOD">Amarelo</label>
             </div>
             <div>
-              <input type="checkbox" id="azul" value="azul" name="color" />
-              <label for="azul">Azul</label>
-            </div>
-            <div>
-              <input type="checkbox" id="branco" value="branco" name="color" />
-              <label for="branco">Branco</label>
-            </div>
-            <div>
-              <input type="checkbox" id="cinza" value="cinza" name="color" />
-              <label for="cinza">Cinza</label>
+              <input type="checkbox" id="azulMOD" value="Azul" name="color" />
+              <label for="azulMOD">Azul</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                id="laranja"
-                value="laranja"
+                id="brancoMOD"
+                value="Branco"
                 name="color"
               />
-              <label for="laranja">Laranja</label>
+              <label for="brancoMOD">Branco</label>
             </div>
             <div>
-              <input type="checkbox" id="verde" value="verde" name="color" />
-              <label for="verde">Verde</label>
+              <input type="checkbox" id="cinzaMOD" value="Cinza" name="color" />
+              <label for="cinzaMOD">Cinza</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                id="vermelho"
-                value="vermelho"
+                id="laranjaMOD"
+                value="Laranja"
                 name="color"
               />
-              <label for="vermelho">Vermelho</label>
+              <label for="laranjaMOD">Laranja</label>
             </div>
             <div>
-              <input type="checkbox" id="preto" value="preto" name="color" />
-              <label for="preto">Preto</label>
+              <input type="checkbox" id="verdeMOD" value="Verde" name="color" />
+              <label for="verdeMOD">Verde</label>
             </div>
             <div>
-              <input type="checkbox" id="rosa" value="rosa" name="color" />
-              <label for="rosa">Rosa</label>
+              <input
+                type="checkbox"
+                id="vermelhoMOD"
+                value="Vermelho"
+                name="color"
+              />
+              <label for="vermelhoMOD">Vermelho</label>
             </div>
             <div>
-              <input type="checkbox" id="vinho" value="vinho" name="color" />
-              <label for="vinho">Vinho</label>
+              <input type="checkbox" id="pretoMOD" value="Preto" name="color" />
+              <label for="pretoMOD">Preto</label>
+            </div>
+            <div>
+              <input type="checkbox" id="rosaMOD" value="Rosa" name="color" />
+              <label for="rosaMOD">Rosa</label>
+            </div>
+            <div>
+              <input type="checkbox" id="vinhoMOD" value="Vinho" name="color" />
+              <label for="vinhoMOD">Vinho</label>
             </div>
           </fieldset>
         </details>
@@ -279,15 +299,15 @@
             </div>
           </summary>
 
-          <div>
-            <button>P</button>
-            <button>M</button>
-            <button>G</button>
-            <button>GG</button>
-            <button>U</button>
-            <button>36</button>
-            <button>38</button>
-            <button>40</button>
+          <div class="size-filter">
+            <button class="size-button">P</button>
+            <button class="size-button">M</button>
+            <button class="size-button">G</button>
+            <button class="size-button">GG</button>
+            <button class="size-button">U</button>
+            <button class="size-button">36</button>
+            <button class="size-button">38</button>
+            <button class="size-button">40</button>
           </div>
         </details>
         <details>
@@ -311,41 +331,56 @@
             </div>
           </summary>
 
-          <fieldset>
+          <fieldset class="price-filters">
             <div>
-              <input type="radio" id="0-50" value="0-50" name="price-filter" />
-              <label for="0-50">de R$0 até R$50</label>
+              <input
+                type="radio"
+                id="i0-50MOD"
+                value="0-50"
+                name="price-filter2"
+                class="price-filter"
+              />
+              <label for="i0-50MOD">de R$0 até R$50</label>
             </div>
             <div>
               <input
                 type="radio"
-                id="51-150"
+                id="i51-150MOD"
                 value="51-150"
-                name="price-filter"
+                name="price-filter2"
+                class="price-filter"
               />
-              <label for="51-150">de R$51 até R$150</label>
+              <label for="i51-150MOD">de R$51 até R$150</label>
             </div>
             <div>
               <input
                 type="radio"
-                id="151-300"
+                id="i151-300MOD"
                 value="151-300"
-                name="price-filter"
+                name="price-filter2"
+                class="price-filter"
               />
-              <label for="151-300">de R$151 até R$300</label>
+              <label for="i151-300MOD">de R$151 até R$300</label>
             </div>
             <div>
               <input
                 type="radio"
-                id="301-500"
+                id="i301-500MOD"
                 value="301-500"
-                name="price-filter"
+                name="price-filter2"
+                class="price-filter"
               />
-              <label for="301-500">de R$301 até R$500</label>
+              <label for="i301-500MOD">de R$301 até R$500</label>
             </div>
             <div>
-              <input type="radio" id="500+" value="500+" name="price-filter" />
-              <label for="500+">a partir de R$500</label>
+              <input
+                type="radio"
+                id="i500+MOD"
+                value="500-infinity"
+                name="price-filter2"
+                class="price-filter"
+              />
+              <label for="i500+MOD">a partir de R$500</label>
             </div>
           </fieldset>
         </details>
