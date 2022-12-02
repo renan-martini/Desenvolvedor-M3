@@ -11,6 +11,14 @@ interface IResponse {
   data: Product[];
 }
 
+interface IEvent extends Event {
+  target: HTMLElement;
+}
+
+interface IInputEvent extends Event {
+  target: HTMLInputElement;
+}
+
 const sizeFilters: Array<string> = [];
 const colorFilters: Array<string> = [];
 const priceFilter: Array<number> = [];
@@ -50,7 +58,7 @@ function renderProducts(products: Product[]) {
 }
 function filterBySize(products: Product[]) {
   Array.from(document.getElementsByClassName("size-filter")).forEach((elem) => {
-    elem.addEventListener("click", (e: any) => {
+    elem.addEventListener("click", (e: IInputEvent) => {
       if (e.target.tagName === "BUTTON") {
         if (e.target.classList.contains("selected")) {
           const sizeIndex = sizeFilters.findIndex(
@@ -78,7 +86,7 @@ function filterBySize(products: Product[]) {
 function filterByColor(products: Product[]) {
   Array.from(document.getElementsByClassName("color-filter")).forEach(
     (elem) => {
-      elem.addEventListener("click", (e: any) => {
+      elem.addEventListener("click", (e: IInputEvent) => {
         if (e.target.name === "color") {
           if (e.target.checked) {
             colorFilters.push(e.target.value);
@@ -107,10 +115,10 @@ function filterByColor(products: Product[]) {
 function filterByPrice(products: Product[]) {
   Array.from(document.getElementsByClassName("price-filters")).forEach(
     (elem) => {
-      elem.addEventListener("click", (e: any) => {
+      elem.addEventListener("click", (e: Event) => {
         if (
-          e.target.name == "price-filter" ||
-          e.target.name == "price-filter2"
+          e.target instanceof HTMLInputElement &&
+          (e.target.name == "price-filter" || e.target.name == "price-filter2")
         ) {
           if (e.target.classList.contains("checked")) {
             Array.from(document.getElementsByClassName("price-filter")).forEach(
@@ -163,7 +171,7 @@ function filterProducts(products: Product[]) {
 }
 
 function openModals() {
-  document.querySelector(".mobile").addEventListener("click", (e: any) => {
+  document.querySelector(".mobile").addEventListener("click", (e: IEvent) => {
     if (e.target.classList.contains("filter-button")) {
       const modal: HTMLElement = document.getElementsByClassName(
         "modal-filter"
@@ -180,7 +188,7 @@ function openModals() {
   const closeFilterModal = document.querySelector(
     ".close-filter-modal"
   ) as HTMLElement;
-  closeFilterModal.addEventListener("click", (e) => {
+  closeFilterModal.addEventListener("click", (_) => {
     const modal: HTMLElement = document.getElementsByClassName(
       "modal-filter"
     )[0] as HTMLElement;
@@ -189,7 +197,7 @@ function openModals() {
   const closeOrderModal = document.querySelector(
     ".close-order-modal"
   ) as HTMLElement;
-  closeOrderModal.addEventListener("click", (e) => {
+  closeOrderModal.addEventListener("click", (_) => {
     const modal: HTMLElement = document.getElementsByClassName(
       "modal-order"
     )[0] as HTMLElement;
