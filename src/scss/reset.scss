@@ -88,7 +88,8 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: "Open Sans", sans-serif;
+  color: $gray-2;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -107,6 +108,7 @@ section {
 }
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 ol,
 ul {
@@ -126,4 +128,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
 }

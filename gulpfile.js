@@ -5,6 +5,7 @@ const webpack = require("webpack");
 const del = require("del");
 const autoprefixer = require("gulp-autoprefixer");
 const sass = require("gulp-sass")(require("sass"));
+const imagemin = require("gulp-imagemin");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
 
@@ -83,7 +84,9 @@ function html() {
 }
 
 function img() {
-  return src(paths.img.src).pipe(dest(paths.dest + "/img"));
+  return src(paths.img.src)
+    .pipe(imagemin())
+    .pipe(dest(paths.dest + "/img"));
 }
 
 const build = series(clean, parallel(styles, scripts, html, img));

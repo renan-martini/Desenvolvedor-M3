@@ -1,0 +1,74 @@
+aside {
+  min-width: 200px;
+  display: none;
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    input[type="checkbox"],
+    input[type="radio"] {
+      padding: 0.5em;
+      appearance: none;
+      outline: 0.1em solid $gray-3;
+      outline-offset: 0.1em;
+    }
+
+    input[type="checkbox"] {
+      translate: 0px 4px;
+    }
+
+    input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+      display: inline-block;
+      background-color: $light-blue;
+    }
+
+    input,
+    label {
+      cursor: pointer;
+    }
+
+    legend {
+      margin-bottom: 10px;
+    }
+  }
+
+  .size-filter {
+    margin: 20px 0px 20px 0px;
+
+    legend {
+      margin-bottom: 15px;
+    }
+    div {
+      display: flex;
+      flex-wrap: wrap;
+      width: 140px;
+      gap: 5px;
+      button {
+        background-color: white;
+        border: 1px solid $gray-3;
+        color: $gray-3;
+
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          filter: brightness(0.95);
+        }
+      }
+      .selected {
+        border: 1px solid $light-blue;
+        color: black;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}

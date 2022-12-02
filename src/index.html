@@ -1,19 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor M3</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor M3</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header class="main-header">
+      <img src="./img/logo-m3.png" alt="" />
+      <button>
+        <img src="./img/shopping-cart.svg" alt="" />
+        <div class="cart-amount">0</div>
+      </button>
+    </header>
+    <section class="filters-section">
+      <h2>Blusas</h2>
+      <div class="mobile">
+        <button class="filter-button">Filtrar</button>
+        <button class="order-button">Ordenar</button>
+      </div>
+      <div class="desktop">
+        <select>
+          <option value="" disabled selected hidden>Ordenar por:</option>
+          <option value="">Mais recentes</option>
+          <option value="">Menor preço</option>
+          <option value="">Maior preço</option>
+        </select>
+      </div>
+    </section>
+    <main>
+      <aside>
+        <fieldset>
+          <legend>CORES</legend>
+          <div>
+            <input type="checkbox" id="amarelo" value="amarelo" name="color" />
+            <label for="amarelo">Amarelo</label>
+          </div>
+          <div>
+            <input type="checkbox" id="azul" value="azul" name="color" />
+            <label for="azul">Azul</label>
+          </div>
+          <div>
+            <input type="checkbox" id="branco" value="branco" name="color" />
+            <label for="branco">Branco</label>
+          </div>
+          <div>
+            <input type="checkbox" id="cinza" value="cinza" name="color" />
+            <label for="cinza">Cinza</label>
+          </div>
+        </fieldset>
+        <div class="size-filter">
+          <legend>TAMANHOS</legend>
+          <div>
+            <button>P</button>
+            <button>M</button>
+            <button>G</button>
+            <button>GG</button>
+            <button>U</button>
+            <button>36</button>
+            <button>38</button>
+            <button>40</button>
+          </div>
+        </div>
+        <fieldset>
+          <legend>FAIXA DE PREÇO</legend>
+          <div>
+            <input type="radio" id="0-50" value="0-50" name="price-filter" />
+            <label for="0-50">de R$0 até R$50</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="51-150"
+              value="51-150"
+              name="price-filter"
+            />
+            <label for="51-150">de R$51 até R$150</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="151-300"
+              value="151-300"
+              name="price-filter"
+            />
+            <label for="151-300">de R$151 até R$300</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="301-500"
+              value="301-500"
+              name="price-filter"
+            />
+            <label for="301-500">de R$301 até R$500</label>
+          </div>
+          <div>
+            <input type="radio" id="500+" value="500+" name="price-filter" />
+            <label for="500+">a partir de R$500</label>
+          </div>
+        </fieldset>
+      </aside>
+      <ul class="products-list">
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+        <li class="product">
+          <img src="./img/img_10.png" alt="" />
+          <h3>CAMISETA MESCLA</h3>
+          <span class="product-value">R$ 28,00</span>
+          <span class="product-parcelamento">até 3x de R$9,33</span>
+          <button>COMPRAR</button>
+        </li>
+      </ul>
+    </main>
+    <div class="modal-filter modal">
+      <div>
+        <header>
+          <h2>FILTRAR</h2>
+          <button>x</button>
+        </header>
+        <p>Mais recentes</p>
+        <p>Maior preço</p>
+        <p>Menor preço</p>
+      </div>
+    </div>
+    <div class="modal-order modal">
+      <div>
+        <header>
+          <h2>ORDENAR</h2>
+          <button>x</button>
+        </header>
+        <details>
+          <summary>
+            CORES
+            <div class="summary-chevron-up">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </summary>
 
-<body>
+          <fieldset>
+            <div>
+              <input
+                type="checkbox"
+                id="amarelo"
+                value="amarelo"
+                name="color"
+              />
+              <label for="amarelo">Amarelo</label>
+            </div>
+            <div>
+              <input type="checkbox" id="azul" value="azul" name="color" />
+              <label for="azul">Azul</label>
+            </div>
+            <div>
+              <input type="checkbox" id="branco" value="branco" name="color" />
+              <label for="branco">Branco</label>
+            </div>
+            <div>
+              <input type="checkbox" id="cinza" value="cinza" name="color" />
+              <label for="cinza">Cinza</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="laranja"
+                value="laranja"
+                name="color"
+              />
+              <label for="laranja">Laranja</label>
+            </div>
+            <div>
+              <input type="checkbox" id="verde" value="verde" name="color" />
+              <label for="verde">Verde</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="vermelho"
+                value="vermelho"
+                name="color"
+              />
+              <label for="vermelho">Vermelho</label>
+            </div>
+            <div>
+              <input type="checkbox" id="preto" value="preto" name="color" />
+              <label for="preto">Preto</label>
+            </div>
+            <div>
+              <input type="checkbox" id="rosa" value="rosa" name="color" />
+              <label for="rosa">Rosa</label>
+            </div>
+            <div>
+              <input type="checkbox" id="vinho" value="vinho" name="color" />
+              <label for="vinho">Vinho</label>
+            </div>
+          </fieldset>
+        </details>
+        <details>
+          <summary>
+            TAMANHOS
+            <div class="summary-chevron-up">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </summary>
 
-</body>
-<h1>Desafio m3</h1>
+          <div>
+            <button>P</button>
+            <button>M</button>
+            <button>G</button>
+            <button>GG</button>
+            <button>U</button>
+            <button>36</button>
+            <button>38</button>
+            <button>40</button>
+          </div>
+        </details>
+        <details>
+          <summary>
+            FAIXA DE PREÇO
+            <div class="summary-chevron-up">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </summary>
 
-<script src="bundle.js"></script>
+          <fieldset>
+            <div>
+              <input type="radio" id="0-50" value="0-50" name="price-filter" />
+              <label for="0-50">de R$0 até R$50</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="51-150"
+                value="51-150"
+                name="price-filter"
+              />
+              <label for="51-150">de R$51 até R$150</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="151-300"
+                value="151-300"
+                name="price-filter"
+              />
+              <label for="151-300">de R$151 até R$300</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="301-500"
+                value="301-500"
+                name="price-filter"
+              />
+              <label for="301-500">de R$301 até R$500</label>
+            </div>
+            <div>
+              <input type="radio" id="500+" value="500+" name="price-filter" />
+              <label for="500+">a partir de R$500</label>
+            </div>
+          </fieldset>
+        </details>
+      </div>
+    </div>
+  </body>
 
+  <script src="bundle.js"></script>
 </html>

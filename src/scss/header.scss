@@ -1,0 +1,41 @@
+.main-header {
+  width: 100vw;
+  height: 70px;
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid $gray-1;
+
+  button {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+
+    .cart-amount {
+      translate: 13px -15px;
+      width: 18px;
+      height: 18px;
+
+      border-radius: 50%;
+
+      background-color: $light-blue;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px 10vw;
+  }
+}
