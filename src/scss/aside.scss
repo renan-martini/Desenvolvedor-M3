@@ -72,3 +72,17 @@ aside {
     display: block;
   }
 }
+
+.show-all-colors {
+  background-color: transparent;
+  color: $gray-3;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

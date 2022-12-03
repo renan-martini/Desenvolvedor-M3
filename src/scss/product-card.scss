@@ -1,5 +1,7 @@
 main {
   display: flex;
+  height: calc(100vh - 270px);
+  overflow-y: auto;
   @media (min-width: 768px) {
     padding: 20px 10vw;
   }
@@ -23,6 +25,10 @@ main {
   h3 {
     font-weight: 500;
     margin: 15px 0px 15px 0px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
   }
 
   .product-value {
@@ -48,4 +54,30 @@ main {
       cursor: pointer;
     }
   }
+}
+
+.load-more-button {
+  width: 200px;
+  height: 30px;
+  color: white;
+  background-color: $light-blue;
+  border: none;
+  font-weight: bold;
+  margin-left: calc(50vw - 100px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 30px;
+  width: 100vw;
+  text-align: center;
+  padding-top: 6px;
 }

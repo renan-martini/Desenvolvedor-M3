@@ -17,7 +17,7 @@
   <body>
     <header class="main-header">
       <img src="./img/logo-m3.png" alt="" />
-      <button>
+      <button class="open-cart">
         <img src="./img/shopping-cart.svg" alt="" />
         <div class="cart-amount">0</div>
       </button>
@@ -29,11 +29,11 @@
         <button class="order-button">Ordenar</button>
       </div>
       <div class="desktop">
-        <select>
+        <select class="order-filter">
           <option value="" disabled selected hidden>Ordenar por:</option>
-          <option value="">Mais recentes</option>
-          <option value="">Menor preço</option>
-          <option value="">Maior preço</option>
+          <option value="recents">Mais recentes</option>
+          <option value="cheaper">Menor preço</option>
+          <option value="expensive">Maior preço</option>
         </select>
       </div>
     </section>
@@ -57,6 +57,52 @@
             <input type="checkbox" id="cinza" value="Cinza" name="color" />
             <label for="cinza">Cinza</label>
           </div>
+          <div>
+            <input type="checkbox" id="laranja" value="Laranja" name="color" />
+            <label for="laranja">Laranja</label>
+          </div>
+          <div>
+            <input type="checkbox" id="verde" value="Verde" name="color" />
+            <label for="verde">Verde</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="vermelho"
+              value="Vermelho"
+              name="color"
+            />
+            <label for="vermelho">Vermelho</label>
+          </div>
+          <div>
+            <input type="checkbox" id="preto" value="Preto" name="color" />
+            <label for="preto">Preto</label>
+          </div>
+          <div>
+            <input type="checkbox" id="rosa" value="Rosa" name="color" />
+            <label for="rosa">Rosa</label>
+          </div>
+          <div>
+            <input type="checkbox" id="vinho" value="Vinho" name="color" />
+            <label for="vinho">Vinho</label>
+          </div>
+          <button class="show-all-colors">
+            Ver todas as cores
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-chevron-down"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
         </fieldset>
         <div class="size-filter">
           <legend>TAMANHOS</legend>
@@ -177,15 +223,17 @@
         </li>
       </ul>
     </main>
+    <button class="load-more-button">CARREGAR MAIS</button>
+    <footer class="footer">M3: Implantação de E-commerce VTEX</footer>
     <div class="modal-order modal">
       <div>
         <header>
           <h2>ORDENAR</h2>
           <button class="close-order-modal">x</button>
         </header>
-        <p>Mais recentes</p>
-        <p>Maior preço</p>
-        <p>Menor preço</p>
+        <p class="recents order-mobile">Mais recentes</p>
+        <p class="expensive order-mobile">Maior preço</p>
+        <p class="cheaper order-mobile">Menor preço</p>
       </div>
     </div>
     <div class="modal-filter modal">
@@ -384,6 +432,78 @@
             </div>
           </fieldset>
         </details>
+      </div>
+    </div>
+    <div class="modal modal-cart">
+      <div>
+        <header>
+          <h2>CARRINHO</h2>
+          <button class="close-cart-modal">X</button>
+        </header>
+        <ul class="cart-products">
+          <li>
+            <img src="./img/img_10.png" alt="" />
+            <div>
+              <h3>CAMISETA MESCLA</h3>
+              <span>R$ 28,00</span>
+              <div class="quantity-container">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./img/img_10.png" alt="" />
+            <div>
+              <h3>CAMISETA MESCLA</h3>
+              <span>R$ 28,00</span>
+              <div class="quantity-container">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./img/img_10.png" alt="" />
+            <div>
+              <h3>CAMISETA MESCLA</h3>
+              <span>R$ 28,00</span>
+              <div class="quantity-container">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./img/img_10.png" alt="" />
+            <div>
+              <h3>CAMISETA MESCLA</h3>
+              <span>R$ 28,00</span>
+              <div class="quantity-container">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="./img/img_10.png" alt="" />
+            <div>
+              <h3>CAMISETA MESCLA</h3>
+              <span>R$ 28,00</span>
+              <div class="quantity-container">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <span class="total-price">Valor total: R$ 100,00</span>
+        <button>FINALIZAR COMPRA</button>
       </div>
     </div>
   </body>
