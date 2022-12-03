@@ -326,12 +326,13 @@ function renderCartProducts() {
       } else {
         cartItems[index].amount -= 1;
       }
+      localStorage.setItem("@M3-cart", JSON.stringify(cartItems));
       renderCartProducts();
     });
 
     productAdd.addEventListener("click", (_) => {
       cartItems[index].amount += 1;
-
+      localStorage.setItem("@M3-cart", JSON.stringify(cartItems));
       renderCartProducts();
     });
 
